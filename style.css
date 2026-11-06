@@ -80,6 +80,29 @@ main {
   padding: 2rem 0;
 }
 
+/* Home page: Virgo photo as background, text on a translucent panel */
+body.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg) url("images/virgo_bg.jpg") center bottom / cover no-repeat;
+}
+
+.home main { flex: 1; width: 100%; }
+
+.home .hero {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 2rem 2.5rem;
+  margin-top: 2rem;
+}
+
+.home footer {
+  background: rgba(237, 231, 227, 0.75);  /* --bg, see-through */
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+}
+
 .hero img {
   width: 260px;
   height: auto;
