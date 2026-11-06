@@ -46,12 +46,7 @@ header {
   gap: 0.5rem;
 }
 
-.site-name {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-}
+nav { margin-left: auto; }  /* keep menu on the right */
 
 nav a {
   color: #fff;
@@ -200,4 +195,14 @@ footer {
   .hero img { order: -1; }  /* photo above text on phones */
   .gallery { flex-direction: column; }
   .project figure { float: none; width: 100%; margin: 0 0 1rem; }
+
+  /* Home: show the whole Virgo photo as a banner below the panel
+     (68vw = photo height at full width, aspect 1920x1310) */
+  body.home { background: var(--bg); min-height: 0; }
+  .home main {
+    background: url("images/virgo_bg.jpg") center bottom / 100% auto no-repeat;
+    padding-bottom: calc(68vw + 1rem);
+  }
+  .home .hero { margin-top: 0; padding: 1.5rem; }
+  .home footer { background: var(--bg); }
 }
