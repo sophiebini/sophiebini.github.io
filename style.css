@@ -1,0 +1,180 @@
+/* ---------- Base ---------- */
+/* Previous palette, to switch back paste these values in:
+   accent #16697a, accent-mid #489fb5, accent-soft #82c0cc,
+   highlight #ffa62b, bg #ede7e3 */
+:root {
+  --accent: #1a535c;       /* header, headings, links */
+  --accent-mid: #ff6b6b;   /* link hover */
+  --accent-soft: #4ecdc4;  /* borders, card stripe, menu hover */
+  --highlight: #ffe66d;    /* active menu item */
+  --card: #fff;            /* boxes on the page background */
+  --text: #222;
+  --muted: #666;
+  --bg: #ede7e3;           /* page background */
+  --max-width: 900px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-mid); }
+
+h1, h2, h3 { color: var(--accent); line-height: 1.25; }
+
+/* ---------- Header / navigation ---------- */
+header {
+  background: var(--accent);
+  color: #fff;
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.site-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.25rem;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover { color: #fff; border-bottom-color: var(--accent-soft); }
+nav a.active { border-bottom-color: var(--highlight); }
+
+/* ---------- Page content ---------- */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+/* Welcome page hero */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.hero img {
+  width: 260px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.hero-text { flex: 1; min-width: 260px; }
+.hero-text h1 { margin: 0 0 1rem; font-size: 2.2rem; }
+
+.hero-text h3 { margin: 1.5rem 0 0.25rem; }
+.contacts { margin: 0; }
+
+/* About page: photos side by side. Each figure's flex value is its image
+   aspect ratio (width/height), so both photos end up the same height. */
+.gallery {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; display: block; border-radius: 6px; }
+
+.gallery figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--muted);
+  text-align: center;
+}
+
+.note { margin-top: -0.5rem; color: var(--muted); font-style: italic; }
+
+/* Research page: one card per topic, figure floated right */
+.project {
+  background: var(--card);
+  border-left: 4px solid var(--accent-soft);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  overflow: auto;
+}
+
+.project h3 { margin-top: 0; }
+
+.project figure {
+  float: right;
+  width: 45%;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.project figure img { width: 100%; display: block; border-radius: 4px; }
+
+.project figcaption {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+/* Full-width figure below the text, for wide plots */
+.project figure.wide { float: none; width: 100%; margin: 1.5rem 0; }
+.project figure.wide figcaption { text-align: left; font-size: 0.9rem; font-style: italic; }
+
+/* Side-by-side plots inside a research card */
+.project .gallery { margin: 1.5rem 0; }
+.project .gallery figure { float: none; width: auto; margin: 0; }
+.project .gallery figcaption { text-align: left; font-size: 0.85rem; font-style: italic; }
+
+.project .more { margin-bottom: 0.25rem; font-weight: bold; }
+.project ul { margin-top: 0; }
+
+/* CV page: embedded PDF */
+.cv-pdf {
+  width: 100%;
+  height: 85vh;
+  border: 1px solid var(--accent-soft);
+  border-radius: 6px;
+  background: var(--card);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--accent-soft);
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  nav a { margin: 0 1rem 0 0; }
+  .hero { justify-content: center; text-align: center; }
+  .hero img { order: -1; }  /* photo above text on phones */
+  .gallery { flex-direction: column; }
+  .project figure { float: none; width: 100%; margin: 0 0 1rem; }
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research &middot; Sophie Bini</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a class="site-name" href="index.html">Sophie Bini</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="teaching.html">Teaching, Mentoring &amp; Outreach</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Research</h1>
+    <p class="note">Work in progress</p>
+
+    <!-- Copy this block once per research topic. -->
+    <div class="project">
+      <figure>
+        <a href="images/MeetGW231123.png">
+          <img src="images/MeetGW231123.png" alt="Infographic: Meet GW231123, the most massive binary black hole observed to date">
+        </a>
+        <figcaption>Credit: Simona J. Miller / Caltech</figcaption>
+      </figure>
+      <h3>Intermediate-mass black holes</h3>
+      <p>
+        On November 23, 2023, the LIGO-Virgo-KAGRA (LVK) Collaboration detected
+        GW231123, a gravitational-wave signal consistent with the merger of two
+        black holes with the highest combined mass the LVK Collaboration has
+        ever observed. These black holes would have been spinning incredibly
+        fast, and their individual masses appear to fall into a range that
+        challenges existing theories about how massive stars evolve and end
+        their lives.
+      </p>
+      <p>
+        The formation scenario and waveform model systematics sparked an
+        exciting debate in the scientific community!
+      </p>
+      <p>
+        I served as paper manager of the LVK publication, and presented this
+        observation for the first time to the scientific community at the
+        Amaldi/GR conference in July 2025. Together with the summer student
+        Krzysztof Król, I further investigated waveform systematics and the
+        impact of Gaussian noise on the interpretation of signals similar to
+        GW231123, showing for the first time that the model
+        systematics observed in GW231123 are expected.
+      </p>
+      <p class="more">Find out more:</p>
+      <ul>
+        <li><a href="https://ligo.org/wp-content/uploads/2025/07/GW231123.pdf">Science summary for the public</a></li>
+        <li><a href="https://iopscience.iop.org/article/10.3847/2041-8213/ae0c9c">The discovery paper</a></li>
+        <li><a href="https://journals.aps.org/prd/abstract/10.1103/gxjb-23lv">Follow-up on waveform systematics</a></li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Robust inference of the source properties of merging black holes</h3>
+      <p>
+        Once a GW signal is detected, its source properties are measured by
+        comparing models of the GW signal to the GW data in a Bayesian
+        framework. Measuring the properties of merging black holes is
+        fundamental to characterizing the population of compact binaries and
+        understanding their formation channels.
+      </p>
+      <p>
+        Unfortunately, gravitational-wave data also contain noise transients,
+        called glitches, caused by the instruments themselves and their
+        interactions with the environment. When glitches overlap with transient
+        GW signals, they can significantly bias the inference of their source
+        properties, especially the black-hole spins and the orbital
+        eccentricity. I am responsible for the mitigation of glitches
+        overlapping with GW signals for the LVK catalogs (GWTC-5, GWTC-6, and
+        GWTC-7).
+      </p>
+      <figure class="wide">
+        <a href="images/glitches.png">
+          <img src="images/glitches.png" alt="Whitened strain in LIGO Hanford and LIGO Livingston showing a gravitational-wave signal and an overlapping glitch">
+        </a>
+        <figcaption>
+          The best approach to mitigate glitches is to simultaneously model the
+          astrophysical signal and the glitch (joint inference). In this example,
+          we model a gravitational-wave event observed by the LIGO detectors in
+          the second part of the fourth LVK observing run with a binary
+          black-hole model (pink) and an agnostic glitch model (yellow).
+        </figcaption>
+      </figure>
+      <p class="more">Find out more:</p>
+      <ul>
+        <li><a href="https://journals.aps.org/prd/abstract/10.1103/hyz2-3wxy">Inferring the spins of merging black holes in the presence of glitches</a></li>
+        <li><a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae9479">Glitches can mess up orbital eccentricity too!</a></li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Detecting gravitational waves</h3>
+      <p>
+        To identify astrophysical signals embedded in detector noise, there are
+        two main approaches: template-based searches, which assume knowledge of
+        the GW signals, and model-independent searches, which do not assume a
+        waveform model but look for excess power that is coherent across
+        multiple GW detectors. Model-independent searches are fundamental to
+        observe GWs from, for example, the coalescence of peculiar (e.g., highly
+        precessing or eccentric) compact binaries, core-collapse supernovae, and
+        cosmic strings, for which the availability of signal models is limited.
+      </p>
+      <p>
+        My contributions include the development of novel machine-learning
+        techniques, such as autoencoders and decision trees, to improve noise
+        rejection and increase the detection sensitivity. I deployed such
+        methods into the existing search pipeline Coherent WaveBurst, and
+        contributed significantly to analyzing LIGO and Virgo data. Moreover,
+        I led the waveform-consistency test included in the LVK
+        catalogs GWTC-4 and GWTC-5, where theoretical models of the GW signals
+        are compared to waveforms reconstructed with minimal assumptions to
+        identify potential discrepancies that may reveal new physics.
+      </p>
+      <!-- Each figure's flex value is its image aspect ratio, so both plots get the same height. -->
+      <div class="gallery">
+        <figure style="flex: 1.65">
+          <a href="images/O4a_search_2G_XGB.png">
+            <img src="images/O4a_search_2G_XGB.png" alt="Cumulative number of candidate events versus inverse false alarm rate for the 2G+XGB search">
+          </a>
+          <figcaption>
+            Cumulative number of candidate events versus inverse false alarm
+            rate (IFAR) found in the low-frequency analyses by 2G+XGB during the
+            first part of the fourth observing run. The model-independent search
+            finds several GW signals from the coalescence of compact objects
+            (triangular points). No significant individual event remains after
+            removing compact binary coalescence candidate signals.
+          </figcaption>
+        </figure>
+        <figure style="flex: 1.52">
+          <a href="images/CCSN_searches.png">
+            <img src="images/CCSN_searches.png" alt="Detection distance of the all-sky searches for several core-collapse supernova emission models">
+          </a>
+          <figcaption>
+            How far can we observe a gravitational-wave signal from a
+            core-collapse supernova? This plot shows the sensitivity of the
+            all-sky searches to different models of core-collapse emission. The
+            current search reaches the Galactic center for three of the emission
+            models we considered.
+          </figcaption>
+        </figure>
+      </div>
+      <p class="more">Find out more:</p>
+      <ul>
+        <li><a href="https://journals.aps.org/prd/abstract/10.1103/wjdz-jdby">All-sky search for short gravitational-wave bursts in the first part of the fourth LIGO-Virgo-KAGRA observing run</a></li>
+        <li><a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.109.042009">Looking for hyperbolic encounters between compact objects</a></li>
+        <li>Improving the sensitivity using
+          <a href="https://iopscience.iop.org/article/10.1088/1361-6382/acd981">autoencoders</a> and
+          <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.062002">decision trees</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>&copy; 2026 Sophie Bini</footer>
+</body>
+</html>
