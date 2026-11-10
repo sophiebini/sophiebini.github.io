@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research &middot; Sophie Bini</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
   <header>
@@ -31,28 +31,31 @@
         </a>
         <figcaption>Credit: Simona J. Miller / Caltech</figcaption>
       </figure>
-      <h3>Intermediate-mass black holes</h3>
+      <h3>An exceptional gravitational-wave event!</h3>
       <p>
         On November 23, 2023, the LIGO-Virgo-KAGRA (LVK) Collaboration detected
         GW231123, a gravitational-wave signal consistent with the merger of two
-        black holes with the highest combined mass the LVK Collaboration has
-        ever observed. These black holes would have been spinning incredibly
-        fast, and their individual masses appear to fall into a range that
-        challenges existing theories about how massive stars evolve and end
-        their lives.
+        massive and highly spinning black holes. The black holes' individual
+        masses and spins appear to fall into a range that challenges existing
+        theories about how massive stars evolve and end their lives. Their
+        merger produced an intermediate-mass black hole, a rare category of
+        black holes heavier than those formed from stellar collapse and much
+        lighter than the supermassive black holes hosted at the centers of
+        galaxies.
       </p>
       <p>
-        The formation scenario and waveform model systematics sparked an
-        exciting debate in the scientific community!
+        The properties of GW231123 sparked an exciting debate in the scientific
+        community about waveform model and noise systematics, and about
+        formation scenarios.
       </p>
       <p>
         I served as paper manager of the LVK publication, and presented this
         observation for the first time to the scientific community at the
         Amaldi/GR conference in July 2025. Together with the summer student
-        Krzysztof Król, I further investigated waveform systematics and the
-        impact of Gaussian noise on the interpretation of signals similar to
-        GW231123, showing for the first time that the model
-        systematics observed in GW231123 are expected.
+        Krzysztof Król, I further investigated waveform model systematics and
+        the impact of Gaussian noise on the interpretation of signals similar
+        to GW231123, showing that the model systematics observed in GW231123
+        can be reproduced in the absence of noise.
       </p>
       <p class="more">Find out more:</p>
       <ul>
@@ -77,20 +80,22 @@
         interactions with the environment. When glitches overlap with transient
         GW signals, they can significantly bias the inference of their source
         properties, especially the black-hole spins and the orbital
-        eccentricity. I am responsible for the mitigation of glitches
-        overlapping with GW signals for the LVK catalogs (GWTC-5, GWTC-6, and
-        GWTC-7).
+        eccentricity. I am investigating the interplay between source
+        properties and glitches, and I am responsible for the mitigation of
+        glitches overlapping with GW signals for the LVK catalogs (GWTC-5,
+        GWTC-6, and GWTC-7).
       </p>
       <figure class="wide">
-        <a href="images/glitches.png">
-          <img src="images/glitches.png" alt="Whitened strain in LIGO Hanford and LIGO Livingston showing a gravitational-wave signal and an overlapping glitch">
+        <a href="images/glitches_v2.png">
+          <img src="images/glitches_v2.png" alt="Whitened LIGO Livingston and Hanford data for GW191119 with the binary black-hole model and the glitch model">
         </a>
         <figcaption>
           The best approach to mitigate glitches is to simultaneously model the
           astrophysical signal and the glitch (joint inference). In this example,
-          we model a gravitational-wave event observed by the LIGO detectors in
-          the second part of the fourth LVK observing run with a binary
-          black-hole model (pink) and an agnostic glitch model (yellow).
+          the gravitational-wave event GW191119 is modeled with a binary
+          black-hole model (blue) and an agnostic glitch model (orange).
+          (Posterior samples from Udall 2025,
+          <a href="https://arxiv.org/abs/2409.03912">arXiv:2409.03912</a>.)
         </figcaption>
       </figure>
       <p class="more">Find out more:</p>
@@ -124,9 +129,9 @@
       </p>
       <!-- Each figure's flex value is its image aspect ratio, so both plots get the same height. -->
       <div class="gallery">
-        <figure style="flex: 1.65">
-          <a href="images/O4a_search_2G_XGB.png">
-            <img src="images/O4a_search_2G_XGB.png" alt="Cumulative number of candidate events versus inverse false alarm rate for the 2G+XGB search">
+        <figure style="flex: 1.62">
+          <a href="images/cWB_search_O4a.png">
+            <img src="images/cWB_search_O4a.png" alt="Cumulative number of candidate events versus inverse false alarm rate for the 2G+XGB search">
           </a>
           <figcaption>
             Cumulative number of candidate events versus inverse false alarm
@@ -134,7 +139,8 @@
             first part of the fourth observing run. The model-independent search
             finds several GW signals from the coalescence of compact objects
             (triangular points). No significant individual event remains after
-            removing compact binary coalescence candidate signals.
+            removing compact binary coalescence candidate signals.<br>
+            Credit: LVK 2025, <a href="https://arxiv.org/abs/2507.12374">arXiv:2507.12374</a>.
           </figcaption>
         </figure>
         <figure style="flex: 1.52">
@@ -157,6 +163,34 @@
         <li>Improving the sensitivity using
           <a href="https://iopscience.iop.org/article/10.1088/1361-6382/acd981">autoencoders</a> and
           <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.062002">decision trees</a></li>
+      </ul>
+    </div>
+    <div class="project">
+      <figure>
+        <a href="images/EMRI.jpg">
+          <img src="images/EMRI.jpg" alt="Time-frequency plot of an EMRI waveform showing many harmonics rising in frequency over one year">
+        </a>
+        <figcaption>Short-time Fourier transform of an EMRI waveform.</figcaption>
+      </figure>
+      <h3>LISA</h3>
+      <p>
+        The Laser Interferometer Space Antenna (LISA) is a space mission
+        designed to detect gravitational waves in the yet unexplored
+        low-frequency regime (10<sup>&minus;4</sup> to 10<sup>&minus;1</sup>&nbsp;Hz),
+        where signals from coalescing supermassive black holes, Galactic
+        binaries, extreme-mass-ratio inspirals (EMRIs), and the stochastic
+        background are expected.
+      </p>
+      <p>
+        This year, I started working on LISA data analysis challenges! I
+        explored alternative windows for the time-frequency representation of
+        LISA data, together with the LISA Sprint 2026 team, and I am now
+        developing methods to improve the inference of the source properties
+        of EMRIs.
+      </p>
+      <p class="more">Find out more:</p>
+      <ul>
+        <li><a href="https://arxiv.org/abs/2609.05601">A compact time-frequency representation for gravitational-wave data analysis</a></li>
       </ul>
     </div>
   </main>
